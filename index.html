@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viva Sempre com Dinheiro - Conquiste Sua Liberdade Financeira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #5B3DF5;
+            --color-primary-dark: #4527C2;
+            --color-accent: #5B3DF5;
+            --color-bg: #FFFFFF;
+            --color-surface: #F5F3FE;
+            --color-text: #191233;
+            --color-text-muted: #574F78;
+            --radius: 16px;
+            --shadow-sm: 0 2px 8px rgba(91, 61, 245, 0.08);
+            --shadow-md: 0 4px 24px rgba(91, 61, 245, 0.12);
+            --font-display: 'Sora', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--color-text);
+        }
+
+        h1 {
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            margin-bottom: 0.75rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg) 100%);
+            padding: 6rem 0 5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subheadline {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .hero-authority {
+            font-size: 0.9375rem;
+            color: var(--color-text-muted);
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: var(--radius);
+            margin: 3rem auto 2.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            font-family: var(--font-body);
+        }
+
+        .btn-primary {
+            background: var(--color-accent);
+            color: #FFFFFF;
+            box-shadow: 0 4px 16px rgba(91, 61, 245, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(91, 61, 245, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-surface);
+        }
+
+        @media (max-width: 640px) {
+            .cta-group {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+
+        .section-alt {
+            background: var(--color-surface);
+        }
+
+        .pain-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pain-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .pain-item {
+            font-size: 1.125rem;
+            color: var(--color-text-muted);
+            padding: 1.25rem;
+            background: var(--color-bg);
+            border-radius: 12px;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .for-who-section {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .for-who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .for-who-card {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .for-who-card h3 {
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .for-who-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .for-who-card li {
+            padding-left: 1.75rem;
+            position: relative;
+            color: var(--color-text-muted);
+        }
+
+        .for-who-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+
+        .for-who-card.not-for li::before {
+            content: '✗';
+            color: #E74C3C;
+        }
+
+        .benefits-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .benefit-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--color-accent), var(--color-primary-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-card p {
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        .stack-section {
+            text-align: center;
+        }
+
+        .stack-section h2 {
+            margin-bottom: 3rem;
+        }
+
+        .stack-list {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .stack-item {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            text-align: left;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+
+        .stack-number {
+            background: var(--color-accent);
+            color: #FFFFFF;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .stack-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .stack-content p {
+            color: var(--color-text-muted);
+        }
+
+        .objections-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .objections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .objection-card {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .objection-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .objection-card p {
+            color: var(--color-text-muted);
+        }
+
+        .guarantee-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guarantee-box {
+            background: var(--color-bg);
+            padding: 3rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            margin-top: 2rem;
+            border: 3px solid var(--color-accent);
+        }
+
+        .guarantee-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .guarantee-box h3 {
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+
+        .guarantee-box p {
+            color: var(--color-text-muted);
+            font-size: 1.0625rem;
+        }
+
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .faq-item {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-item h3 {
+            margin-bottom: 0.75rem;
+            color: var(--color-primary);
+        }
+
+        .faq-item p {
+            color: var(--color-text-muted);
+        }
+
+        .cta-final {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .cta-final h2 {
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .cta-final p {
+            font-size: 1.125rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-final .btn-primary {
+            background: #FFFFFF;
+            color: var(--color-primary);
+        }
+
+        .cta-final .btn-primary:hover {
+            background: var(--color-surface);
+            transform: translateY(-2px);
+        }
+
+        .price-info {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .price-highlight {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #FFFFFF;
+            padding: 1rem;
+            box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .mobile-cta-bar .btn {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-cta-bar {
+                display: block;
+            }
+        }
+
+        footer {
+            background: var(--color-text);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Conquiste Sua Liberdade Financeira e Viva com Tranquilidade</h1>
+                <p class="hero-subheadline">Mentoria online completa para você sair das dívidas, limpar seu nome e conquistar a estabilidade financeira que sempre sonhou</p>
+                <p class="hero-authority">Método passo a passo testado para organizar suas finanças e realizar seus sonhos</p>
+
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/a9VqYUsbX5w" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="cta-group">
+                    <a href="https://go.hotmart.com/A107724075C?dp=1" class="btn btn-primary" data-track="cta-principal">Quero Começar Agora</a>
+                    <a href="https://go.hotmart.com/A107724075C" class="btn btn-secondary" data-track="cta-secundario">Quero conhecer mais o produto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pain-section section-alt">
+        <div class="container">
+            <h2>Você se identifica com alguma dessas situações?</h2>
+            <div class="pain-list">
+                <div class="pain-item">Você está com o nome sujo, dívidas acumuladas e não sabe por onde começar a organizar sua vida financeira?</div>
+                <div class="pain-item">Perde o sono pensando nas cobranças, faturas do cartão de crédito e contas que não param de chegar?</div>
+                <div class="pain-item">Sente que nunca vai conseguir realizar seus sonhos porque todo o dinheiro que entra já tem destino certo nas dívidas?</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="for-who-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Para Quem é Este Programa</h2>
+            <div class="for-who-grid">
+                <div class="for-who-card">
+                    <h3>✅ Este programa é para você se:</h3>
+                    <ul>
+                        <li>Está endividado e quer sair dessa situação de vez</li>
+                        <li>Deseja limpar seu nome e recuperar seu crédito</li>
+                        <li>Quer aprender a organizar suas finanças do zero</li>
+                        <li>Busca estabilidade financeira e paz de espírito</li>
+                        <li>Está disposto a seguir um método passo a passo</li>
+                    </ul>
+                </div>
+                <div class="for-who-card not-for">
+                    <h3>❌ Este programa NÃO é para você se:</h3>
+                    <ul>
+                        <li>Busca fórmulas mágicas ou enriquecimento rápido</li>
+                        <li>Não está disposto a rever seus hábitos financeiros</li>
+                        <li>Quer apenas teoria sem aplicação prática</li>
+                        <li>Procura investimentos de alto risco</li>
+                        <li>Não tem interesse em assumir o controle das suas finanças</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section section-alt">
+        <div class="container">
+            <h2>O Que Você Vai Conquistar</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Liberdade das Dívidas</h3>
+                    <p>Aprenda estratégias reais para negociar suas dívidas com descontos e sair do vermelho de forma inteligente</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Organização Financeira</h3>
+                    <p>Domine ferramentas práticas para controlar suas receitas e despesas e nunca mais perder o controle do seu dinheiro</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Nome Limpo e Crédito</h3>
+                    <p>Descubra como limpar seu nome e recuperar seu crédito para voltar a ter acesso a oportunidades financeiras</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Estabilidade Real</h3>
+                    <p>Construa uma base financeira sólida para viver com tranquilidade e realizar seus sonhos sem medo</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Mentalidade Transformada</h3>
+                    <p>Mude sua relação com o dinheiro e desenvolva hábitos que trazem resultados duradouros</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Caminho para Seus Sonhos</h3>
+                    <p>Tenha clareza e um plano concreto para realizar aquilo que sempre desejou, mas achava impossível</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stack-section">
+        <div class="container">
+            <h2>O Que Está Incluso na Mentoria</h2>
+            <div class="stack-list">
+                <div class="stack-item">
+                    <div class="stack-number">1</div>
+                    <div class="stack-content">
+                        <h3>Diagnóstico Financeiro Completo</h3>
+                        <p>Aprenda a fazer um raio-x da sua situação atual, identificar todas as suas dívidas e priorizar o que pagar primeiro</p>
+                    </div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-number">2</div>
+                    <div class="stack-content">
+                        <h3>Estratégias de Negociação de Dívidas</h3>
+                        <p>Técnicas comprovadas para negociar com credores e conseguir descontos de até 90% nas suas dívidas</p>
+                    </div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-number">3</div>
+                    <div class="stack-content">
+                        <h3>Sistema de Organização Financeira</h3>
+                        <p>Método prático para controlar seu dinheiro, eliminar desperdícios e criar sobra no final do mês</p>
+                    </div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-number">4</div>
+                    <div class="stack-content">
+                        <h3>Como Limpar Seu Nome e Recuperar Crédito</h3>
+                        <p>Passo a passo para tirar seu nome dos órgãos de proteção ao crédito e voltar a ter acesso ao mercado</p>
+                    </div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-number">5</div>
+                    <div class="stack-content">
+                        <h3>Planejamento para Realizar Seus Sonhos</h3>
+                        <p>Ferramentas para definir objetivos financeiros e criar um plano realista para conquistar o que você deseja</p>
+                    </div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-number">6</div>
+                    <div class="stack-content">
+                        <h3>Aulas Gravadas com Acesso Imediato</h3>
+                        <p>Conteúdo completo disponível para você assistir no seu ritmo, quantas vezes precisar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="objections-section section-alt">
+        <div class="container">
+            <h2>Suas Dúvidas Respondidas</h2>
+            <div class="objections-grid">
+                <div class="objection-card">
+                    <h3>"Eu não tenho tempo para fazer um curso"</h3>
+                    <p>Esta mentoria foi criada justamente para pessoas com rotina corrida. As aulas são práticas e diretas, você assiste no seu tempo livre e aplica no seu dia a dia. Não é sobre gastar horas estudando, é sobre ter clareza do que fazer e começar a agir.</p>
+                </div>
+                <div class="objection-card">
+                    <h3>"Já tentei organizar minhas finanças e não funcionou"</h3>
+                    <p>A diferença está no método. Não é sobre planilhas complicadas ou teoria abstrata. Aqui você aprende estratégias reais de negociação, técnicas específicas para sua situação e um sistema simples que funciona na prática, mesmo se você já tentou antes e não deu certo.</p>
+                </div>
+                <div class="objection-card">
+                    <h3>"Minha situação é muito complicada, será que isso serve para mim?"</h3>
+                    <p>Este programa foi desenvolvido justamente para pessoas em situação de caos financeiro. Não importa quantas dívidas você tem ou há quanto tempo está endividado — o método funciona do zero, seja qual for seu ponto de partida. Se você está disposto a seguir o passo a passo, vai conseguir sair dessa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee-section">
+        <div class="container">
+            <h2>Compra 100% Segura e Protegida</h2>
+            <div class="guarantee-box">
+                <div class="guarantee-icon">🔒</div>
+                <h3>Proteção Hotmart</h3>
+                <p>Sua compra é processada pela Hotmart, a maior plataforma de produtos digitais da América Latina, com todos os seus dados protegidos e transação totalmente segura.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section section-alt">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Como funciona o acesso à mentoria?</h3>
+                    <p>Assim que sua compra for confirmada, você recebe um e-mail com seus dados de acesso à plataforma. De lá, você pode assistir todas as aulas gravadas quantas vezes quiser, no seu ritmo.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Por quanto tempo tenho acesso ao conteúdo?</h3>
+                    <p>Você terá acesso vitalício ao conteúdo da mentoria. Pode assistir e revisitar as aulas sempre que precisar, sem limite de tempo.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Quais são as formas de pagamento?</h3>
+                    <p>Você pode pagar via cartão de crédito (em até 12x), boleto bancário ou PIX. O processamento é feito pela Hotmart, de forma 100% segura.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Preciso de conhecimento prévio em finanças?</h3>
+                    <p>Não! A mentoria foi criada para pessoas que estão começando do zero. O conteúdo é explicado de forma simples e prática, sem jargões complicados.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Como funciona o suporte?</h3>
+                    <p>Você terá acesso a canais de suporte para tirar dúvidas operacionais sobre a plataforma e o conteúdo da mentoria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <h2>Chegou a Hora de Transformar Sua Vida Financeira</h2>
+            <p>Comece agora sua jornada rumo à liberdade financeira. O acesso é liberado imediatamente após a confirmação da compra.</p>
+            <div class="price-info">
+                <span class="price-highlight">12x de R$ 89,82</span>
+                ou R$ 870,00 à vista
+            </div>
+            <div style="margin-top: 2rem;">
+                <a href="https://go.hotmart.com/A107724075C?dp=1" class="btn btn-primary" data-track="cta-principal">Garantir Minha Vaga Agora</a>
+            </div>
+            <p style="margin-top: 1.5rem; font-size: 0.9375rem;">🔒 Acesso imediato • Compra 100% segura</p>
+        </div>
+    </section>
+
+    <div class="mobile-cta-bar">
+        <a href="https://go.hotmart.com/A107724075C?dp=1" class="btn btn-primary" data-track="cta-principal">Começar Agora - 12x R$ 89,82</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Viva Sempre com Dinheiro. Todos os direitos reservados.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8125rem;">Este site não faz parte do site do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de forma alguma. FACEBOOK é uma marca registrada da FACEBOOK, Inc.</p>
+        </div>
+    </footer>
+</body>
+</html>
